@@ -3,9 +3,6 @@ package main
 import (
 	"context"
 	"io"
-	"encoding/json"
-	"reflect"
-	"strings"
 	"net/http"
 	"gopkg.in/olivere/elastic.v5"  
 )
@@ -44,7 +41,7 @@ func hello(w http.ResponseWriter, r *http.Request) {
 
 	// searchResult is of type SearchResult and returns hits, suggestions,
 	// and all kinds of other information from Elasticsearch.
-	io.WriteString(w,"Query took %d milliseconds\n", searchResult.TookInMillis)
+	io.WriteString(w,"Query took milliseconds : " + searchResult.TookInMillis)
 
 
 }
