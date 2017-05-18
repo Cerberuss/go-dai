@@ -41,7 +41,8 @@ func hello(w http.ResponseWriter, r *http.Request) {
 
 	// searchResult is of type SearchResult and returns hits, suggestions,
 	// and all kinds of other information from Elasticsearch.
-	io.WriteString(w,"Query took milliseconds : " + searchResult.TookInMillis)
+	s := fmt.Sprintf("Query took milliseconds : %d ", searchResult.TookInMillis)
+	io.WriteString(w,s)
 
 
 }
