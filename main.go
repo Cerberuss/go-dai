@@ -2,7 +2,7 @@ package main
 
 import (
 	"io"
-	"net/http",
+	"net/http"
 	"gopkg.in/olivere/elastic.v5" 
 )
 
